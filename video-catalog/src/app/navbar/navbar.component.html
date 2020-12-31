@@ -1,0 +1,8 @@
+<!-- b4-navbar-minimal-ul -->
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <ul class="nav navbar-nav">
+        <li class="nav-item" *ngFor="let link of links">
+            <a class="nav-link" [routerLink]="link.href">{{link.text}}</a>
+        </li>
+    </ul>
+</nav>
