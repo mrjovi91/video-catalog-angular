@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { MovieModule } from './movie/movie.module'
 import { AppRoutingModule } from './app-routing.module';
 import { MovieRoutingModule } from './movie/movie-routing.module'
+
 import { AppComponent } from './app/app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MovieRoutingModule
+    MovieRoutingModule,
+    MovieModule
   ],
   providers: [],
   bootstrap: [AppComponent]
