@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { PaginationWidgetComponent } from './pagination-widget/pagination-widget.component';
 import { SearchWidgetComponent } from './search-widget/search-widget.component';
 import { CategoryFilterWidgetComponent } from './category-filter-widget/category-filter-widget.component';
-
+import { Router, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,7 +13,9 @@ import { CategoryFilterWidgetComponent } from './category-filter-widget/category
     SearchWidgetComponent, 
     CategoryFilterWidgetComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    FormsModule
   ],
   exports: [
     PaginationWidgetComponent, 

@@ -1,0 +1,155 @@
+.btn-category-movie {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  opacity: 0.65;
+}
+
+.btn-category-movie:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-category-movie:focus, .btn-category-movie.focus {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-category-movie.disabled, .btn-category-movie:disabled {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  opacity: 1;
+}
+
+.btn-category-movie:not(:disabled):not(.disabled):active, .btn-category-movie:not(:disabled):not(.disabled).active,
+.show > .btn-category-movie.dropdown-toggle {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.btn-category-movie:not(:disabled):not(.disabled):active:focus, .btn-category-movie:not(:disabled):not(.disabled).active:focus,
+.show > .btn-category-movie.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-category-any {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  opacity: 0.65;
+}
+
+.btn-category-any:hover {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+.btn-category-any:focus, .btn-category-any.focus {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+.btn-category-any.disabled, .btn-category-any:disabled {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  opacity: 1;
+}
+
+.btn-category-any:not(:disabled):not(.disabled):active, .btn-category-any:not(:disabled):not(.disabled).active,
+.show > .btn-category-any.dropdown-toggle {
+  color: #fff;
+  background-color: #545b62;
+  border-color: #4e555b;
+}
+
+.btn-category-any:not(:disabled):not(.disabled):active:focus, .btn-category-any:not(:disabled):not(.disabled).active:focus,
+.show > .btn-category-any.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+.btn-category-series {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+  opacity: 0.65;
+}
+
+.btn-category-series:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-category-series:focus, .btn-category-series.focus {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+
+.btn-category-series.disabled, .btn-category-series:disabled {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+  opacity: 1;
+}
+
+.btn-category-series:not(:disabled):not(.disabled):active, .btn-category-series:not(:disabled):not(.disabled).active,
+.show > .btn-category-series.dropdown-toggle {
+  color: #fff;
+  background-color: #1e7e34;
+  border-color: #1c7430;
+}
+
+.btn-category-series:not(:disabled):not(.disabled):active:focus, .btn-category-series:not(:disabled):not(.disabled).active:focus,
+.show > .btn-category-series.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+
+.btn-category-episode {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+  opacity: 0.65;
+}
+
+.btn-category-episode:hover {
+  color: #212529;
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.btn-category-episode:focus, .btn-category-episode.focus {
+  color: #212529;
+  background-color: #e0a800;
+  border-color: #d39e00;
+  box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
+}
+
+.btn-category-episode.disabled, .btn-category-episode:disabled {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+  opacity: 1;
+}
+
+.btn-category-episode:not(:disabled):not(.disabled):active, .btn-category-episode:not(:disabled):not(.disabled).active,
+.show > .btn-category-episode.dropdown-toggle {
+  color: #212529;
+  background-color: #d39e00;
+  border-color: #c69500;
+}
+
+.btn-category-episode:not(:disabled):not(.disabled):active:focus, .btn-category-episode:not(:disabled):not(.disabled).active:focus,
+.show > .btn-category-episode.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
+}

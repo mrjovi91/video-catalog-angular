@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-category-filter-widget',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryFilterWidgetComponent implements OnInit {
 
+  @Input()
+  categories: any;
+
+  @Input()
+  selectedCategory: string;
+
+  @Output()
+  typeClicked = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clickedType(type: string){
+    this.typeClicked.emit(type);
   }
 
 }

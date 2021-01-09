@@ -1,0 +1,41 @@
+<div class="alert alert-primary" role="alert" *ngIf="loading">
+    Loading...
+</div>
+  
+<!-- <table class="table table-striped table-bordered" *ngIf="!loading"> -->
+<div class="alert alert-danger" role="alert" *ngIf="!loading && isError">
+    {{isError}}
+</div>
+
+<table class="table table-bordered" *ngIf="!loading && searchResults && !isError">
+    <thead>
+        <tr>
+            <th scope="col" width="150"></th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Type</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let movie of searchResults.Search; let i=index">
+        <tr style="background-color: white;" *ngIf="(i+1)%2===0">
+            <td style="text-align: center;"><img [src]="movie.Poster" width="38" height="56"></td>
+            <td>{{movie.Title}}</td>
+            <td>{{movie.Year}}</td>
+            <td>
+                <span class="badge badge-primary" *ngIf="movie.Type==='movie'">{{movie.Type}}</span>
+                <span class="badge badge-success" *ngIf="movie.Type==='series'">{{movie.Type}}</span>
+                <span class="badge badge-warning" *ngIf="movie.Type==='episode'">{{movie.Type}}</span>
+            </td>
+        </tr>
+        <tr style="background-color: #F5F5F5;" *ngIf="(i+1)%2!=0">
+            <td style="text-align: center;"><img [src]="movie.Poster" width="38" height="56"></td>
+            <td>{{movie.Title}}</td>
+            <td>{{movie.Year}}</td>
+            <td>
+                <span class="badge badge-primary" *ngIf="movie.Type==='movie'">{{movie.Type}}</span>
+                <span class="badge badge-success" *ngIf="movie.Type==='series'">{{movie.Type}}</span>
+                <span class="badge badge-warning" *ngIf="movie.Type==='episode'">{{movie.Type}}</span>
+            </td>
+        </tr>
+    </tbody>
+</table>

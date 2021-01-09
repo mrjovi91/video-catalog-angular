@@ -4,44 +4,14 @@
 <div class="container">
     <div class="row">
       <div class="col-sm">
-        <app-pagination-widget></app-pagination-widget>
+        <app-pagination-widget [resultsPerPage]="resultsPerPage" [currentPage]="currentPage" [totalResults]="totalResults" [isLoading]="isLoading" [isError]="isError" (pageClick)="goToPage($event)"></app-pagination-widget>
       </div>
       <div class="col-sm">
-        <app-search-widget></app-search-widget>
+        <app-search-widget [query]="search" (newSearch)="newSearch($event)"></app-search-widget>
       </div>
       <div class="col-sm">
-        <app-category-filter-widget></app-category-filter-widget>
+        <app-category-filter-widget [categories]="movieCategories" [selectedCategory]="selectedCategory" (typeClicked)="changeCategoryType($event)"></app-category-filter-widget>
       </div>
     </div>
 </div>
-
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col"></th>
-        <th scope="col">Title</th>
-        <th scope="col">Year</th>
-        <th scope="col">Type</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+<app-movie-table [loading]="isLoading" [searchResults]="searchResults" [isError]="isError"></app-movie-table>

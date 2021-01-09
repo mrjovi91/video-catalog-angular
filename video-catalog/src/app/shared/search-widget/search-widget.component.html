@@ -1,6 +1,7 @@
 <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Enter a search term" aria-label="Enter a search term" aria-describedby="basic-addon2">
+    <input type="text" class="form-control" placeholder="Enter a search term" aria-label="Enter a search term" aria-describedby="basic-addon2" [(ngModel)]="query" [value]="query">
+    <!-- <input type="text" class="form-control" placeholder="Enter a search term" aria-label="Enter a search term" aria-describedby="basic-addon2" *ngIf="!initialValue"> -->
     <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button">Search</button>
+      <button class="btn btn-outline-secondary" type="button" [disabled]="!query" (click)="search(query)">Search</button>
     </div>
 </div>

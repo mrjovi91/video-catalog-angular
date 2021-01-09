@@ -1,6 +1,5 @@
-<div class="btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-secondary">ANY</button>
-    <button type="button" class="btn btn-primary">movie</button>
-    <button type="button" class="btn btn-success">series</button>
-    <button type="button" class="btn btn-warning">episode</button>
+<div class="btn-group" role="group" aria-label="Category Buttons" *ngFor="let category of categories">
+    <button type="button" [class]="category.cssStyle" [disabled]="category.name === selectedCategory" (click)="clickedType(category.name)">{{category.name}}</button>
 </div>
+
+ 

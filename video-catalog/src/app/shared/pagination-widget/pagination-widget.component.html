@@ -1,9 +1,18 @@
 <nav aria-label="Page navigation example">
     <ul class="pagination">
-      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      <li class="page-item">
+        <button class="page-link" disabled="true" style="color:gray" *ngIf="currentPage == 1 || shownPagination.length==0 || isLoading || isError">&lt;&lt;</button>
+        <a class="page-link" (click)="clickedPage(currentPage-1)" *ngIf="!(currentPage == 1 || shownPagination.length==0) && !isLoading && !isError">&lt;&lt;</a>
+      </li>
+      <li class="page-item" *ngFor="let page of shownPagination">
+        <a class="page-link" (click)="clickedPage(page)" *ngIf="currentPage!=page && !isLoading && !isError">{{page}}</a>
+        <button class="page-link" disabled="true" style="background-color: #136aec; color: white" *ngIf="currentPage==page  && !isLoading && !isError">{{page}}</button>
+        <!-- <a class="page-link" href="#" style="background-color: #136aec; color: white" *ngIf="currentPage==page">{{page}}</a> -->
+      </li>
+      <li class="page-item">
+        <button class="page-link" disabled="true" style="color:gray" *ngIf="(lastDisplayedResult===totalResults || shownPagination.length==0 || isLoading || isError)">&gt;&gt;</button>
+        <a class="page-link" (click)="clickedPage(currentPage+1)" *ngIf="!(lastDisplayedResult===totalResults || shownPagination.length==0 || isLoading || isError)">&gt;&gt;</a>
+      </li>
     </ul>
+    <div *ngIf="!isLoading && !isError && totalResults">Showing {{firstDisplayedResult}} - {{lastDisplayedResult}} of {{totalResults}}</div>
 </nav>
