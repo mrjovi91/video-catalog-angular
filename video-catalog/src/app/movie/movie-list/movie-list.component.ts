@@ -129,7 +129,7 @@ export class MovieListComponent implements OnInit {
               this.isLoading = false;
           }
           else
-            this.showError('Error');
+            this.showError('No results found.');
           
         },
         error => {

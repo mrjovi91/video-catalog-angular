@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "video-catalog-angular": {
+      "hosting": {
+        "video-catalog": [
+          "video-catalog-angular"
+        ]
+      }
+    }
+  }
+}

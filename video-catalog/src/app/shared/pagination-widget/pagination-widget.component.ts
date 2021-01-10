@@ -49,22 +49,42 @@ export class PaginationWidgetComponent implements OnInit {
   refreshPagination(){
     this.totalPages = Math.ceil(this.totalResults / this.resultsPerPage);
     // Set pagination
-    if (this.currentPage < 6){
-      if(this.totalPages < 5){
-        this.shownPagination = [];
-        for(let i:number=1; i<=this.totalPages; i++){
-          this.shownPagination.push(i);
-        }
-      }
-      else{
-        this.shownPagination = [1,2,3,4,5];
+    if(this.totalPages < 5){
+      this.shownPagination = [];
+      for(let i:number=1; i<=this.totalPages; i++){
+        this.shownPagination.push(i);
       }
     }
     else{
-      this.shownPagination = [];
-      for(let i: number=this.currentPage - 4; i<= this.currentPage; i++){
-        this.shownPagination.push(i);
+      if (this.currentPage < 3)
+        this.shownPagination = [1,2,3,4,5]
+      else{
+        this.shownPagination = [];
+        let firstPage: number;
+        let lastPage: number;
+        
+        const pageDiff = this.totalPages - this.currentPage
+        if (pageDiff > 1){
+          firstPage = this.currentPage - 2;
+          lastPage = this.currentPage + 2;
+        }
+        else if(pageDiff === 0){
+          firstPage = this.currentPage - 4;
+          lastPage = this.currentPage;
+        }
+        else{
+          firstPage = this.currentPage - 3;
+          lastPage = this.totalPages;
+        }
+  
+        if (firstPage < 1)
+          firstPage = 1;
+  
+        for(let i: number=firstPage; i<= lastPage; i++){
+          this.shownPagination.push(i);
+        }
       }
+      
     }
 
     // Set result index
